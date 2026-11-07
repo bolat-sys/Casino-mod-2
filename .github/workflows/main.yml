@@ -22,9 +22,9 @@ jobs:
           distribution: 'temurin'
 
       - name: Setup Gradle
-  uses: gradle/actions/setup-gradle@v4
-  with:
-    gradle-version: '8.8'
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.8'
 
       - name: Build Mod
         run: gradle build
@@ -33,4 +33,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: CasinoMod-1.20.1
-          path: build/libs/*.jar
+          path: '**/build/libs/*.jar'
